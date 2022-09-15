@@ -1,5 +1,5 @@
 body {
-    background-color: #080808;
+    background-color: gray;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
@@ -27,7 +27,7 @@ body {
     margin-left: 5px;
  }
  span{
-    color: gray;
+    color: black;
  }
  .imagen{
     margin-top: 30px;
@@ -90,7 +90,7 @@ body {
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: red;
+        background-color: black;
         color: white;
         text-align: center;
       }
