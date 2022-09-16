@@ -184,4 +184,6 @@ body {
         main{
             display: none;
         }
-        
+        .navigation{
+            font-size: 19px;
+        }
