@@ -146,9 +146,9 @@ body {
         }
         
         .img {
-            height: 380px;
-            width: 250px;
-            object-fit: cover;
+           height: 380px;
+           width: 250px;
+           object-fit: cover;
         }
         .contenedor-padre{
             display: flex;
@@ -162,7 +162,7 @@ body {
          .contenedor-texto{
             width: 80%;
             margin-top: 60px;
-            margin-left: -20px;
+            margin-left: 20px;
             margin-right: 30px;
             align-items: flex-end;
             flex-wrap: wrap;
