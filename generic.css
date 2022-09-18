@@ -60,48 +60,7 @@ body {
       text-transform: uppercase;
       font-size: 14px;
       }
-
-      .Peliculasrecomendadas {
-        text-align: center;
-        list-style: inside;
-        display: grid;
-        grid-row-gap: 25px;
-        grid-column-gap: 25px;
-        grid-template-columns: auto auto auto;
-         padding: 10px;
-         border: 1px solid white;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        
-        }
-        .Lomasvisto {
-          text-align: center;
-          list-style: inside;
-          display: grid;
-          grid-row-gap: 25px;
-          grid-column-gap: 25px;
-          grid-template-columns: auto auto auto;
-           padding: 10px;
-           border: 1px solid white;
-          padding: 20px;
-          text-align: center;
-          color: white;
-        }
-        
-        .Seriesrecomendadas {
-          text-align: center;
-          list-style: inside;
-          display: grid;
-          grid-row-gap: 25px;
-          grid-column-gap: 25px;
-          grid-template-columns: auto auto auto;
-           padding: 10px;
-           border: 1px solid white;
-          padding: 20px;
-          text-align: center;
-          color: white;
-        }  
+      
 
       .footer {
         /*position: fixed;*/
