@@ -139,9 +139,62 @@ body {
          .h1general{
             text-align: center;
         }
-        main{
-            display: none;
-        }
+        
         .navigation{
             font-size: 19px;
-        }   
+        } 
+
+        .secciongeneros{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: flex-start;
+          padding: 10px;
+      }
+      
+      .titulosecciongeneros{
+          color: white;
+          margin-top: 10px;
+          margin-bottom: 0px;
+          align-self: center;
+          font-size: 35px;
+      }
+      
+      .hijosecciongeneros{
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          border-radius: 10px;
+          justify-content: flex-start;
+          align-items: center;
+      
+      }
+      
+      .listasecciongeneros{
+          color: white;
+          list-style: none;
+          padding-inline-start: 0%;
+      
+      }
+      
+      .lista{
+          padding: 0px 10px;
+          display: flex;
+          justify-content: center;
+          margin: 5px 0px;
+          background-color: red;
+          border-radius: 10px;
+          padding: 10px;
+      }
+      
+      .linkadetalleGenero{
+          color: white;
+          font-size: 20px;
+          text-decoration: none;
+          border-radius: 10px;
+          padding: 10px;
+          color: white;
+      }
+      .resultadobusquedaoculto{
+        display: none;
+      }
