@@ -111,6 +111,7 @@ body {
         height: 380px;
         width: 250px;
         object-fit: cover;
+        border-radius: 15px;
      }
      /* reglas de detalle pelis y serie, resultado busqueda */
      .contenedor-padre{ 
@@ -199,6 +200,17 @@ body {
         border-radius: 10px;
         padding: 10px;
         color: white;
+    }
+    /* responsive */
+    @media (max-width: 420px){
+      
+      .logoNav{
+        width: 40%;
+      }
+      nav li{
+        margin-left: 0px;
+         margin-bottom: 15px;
+      }
     }
 
 
