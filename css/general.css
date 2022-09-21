@@ -67,7 +67,7 @@ body {
       }
 
       .footer {
-        /*position: fixed;*/
+        
         left: 0;
         bottom: 0;
         width: 100%;
@@ -117,7 +117,7 @@ body {
      .contenedor-padre{ 
         display: flex;
         width: 100%;
-        margin-top: -20px;
+        margin-top: 20px;
      }
      .contenedor-imagen{
         width: 50%;
@@ -125,7 +125,7 @@ body {
      }
      .contenedor-texto{
         margin-top: 60px;
-        margin-left: -20px;
+        margin-left: 20px;
         margin-right: 30px;
         align-items:flex-end;
         flex-wrap: wrap;
