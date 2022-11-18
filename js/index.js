@@ -1,122 +1,65 @@
- //Validacion del formulario//
-
- let formulario = document.querySelector(".buscador");
- let inputField = document.querySelector("#navigation");
- 
-
- formulario.addEventListener("submit", function (evento) {
-  evento.preventDefault()
-    if (inputField.value == "") {
-        alert("La busqueda no puede estar vacia!!")
-    } else if (inputField.value.length <= 3) {
-        alert("El termino a buscar debe tener al menos tres caracteres")
-    } else {
-        this.submit();
-    }
- 
- });
-
-//Peliculas Populares//
-let urlPopularMovies = "https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US";
-
-fetch(urlPopularMovies)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-
-    let info = data.results;
-
-    let pelisPopulares = document.querySelector(
-      ".contenedorArticulosPeliculas"
-    );
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/general.css">
+</head>
+<body>
     
-    let pelisPopularesLista = "";
+    <header>
+        <div class="myNavbar">
+            <a href="index.html">
+                <img class="logoNav" src="./img/imagenes tp/logo tp.png" alt="Logo de cinepremium"/>
+            </a>
+            <nav>
+                <ul>
+                <li> <a class="navigation"  href="./index.html">Home</a></li>
+                  <li> <a class="navigation" href="./genres.html">Genero</a></li>
+                  <li> <a class=" navigation" href="./favorite.html">Favoritos</a></li>
+                  <li>
+                    
+                <form me class="buscador" action="./search-results.html" method="GET" >
+                    <Input id="navigation" type="search" name="formularioDeBusqueda" placeholder="¿Qué querés buscar?">
+                </form></li>
+                </ul>
+            </nav>
+        </div>
+</header>
 
-    for (i = 0; i < 5; i++) {
-      pelisPopularesLista += `
-                <article class="articulosIndex">
-                    <div class="contenedorImagen">
-                        <a href="detail-movie.html?id=${info[5].id}">
-                            <img src= "https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
-                        </a>
-                    </div>
-                    <h3>${info[i].title}</h3>
-                    <p>${info[i].release_date}</p>
-                </article>`;
-    }
-    pelisPopulares.innerHTML = pelisPopularesLista;
-  })
-  .catch(function (error) {
-    console.log("El error fue: " + error);
-  });
 
-//Series Populares//
+<main>
+    <section class="seccionPeliculas">
+        <h2 class="title1"> PELÍCULAS RECOMENDADAS</h2>
+        <div class="contenedorArticulosPeliculas">
+           -----------------
+        </div>
+    </section>
 
-let urlPopularSeries ="https://api.themoviedb.org/3/tv/popular?api_key=4bcb2ca1395628db6221ba6939b8c9d7";
+    <section class="seccionSeries">
+        <h2 class="title1"> SERIES</h2>
+        <div class="contenedorArticulosSeries">
+            --------------------
+        </div>
+    </section>
 
-fetch(urlPopularSeries)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
+    <section class="seccionVistos">
+        <h2 class="title1">LO MAS VISTO</h2>
+        <div class="contenedorArticulosVisto">
+            ------------------------
+        </div>
+    </section>
 
-    let info = data.results;
+</main>
 
-    let seriesPopulares = document.querySelector(
-      ".contenedorArticulosSeriesPopulares"
-    );
-    let seriesPopularesLista = "";
 
-    for (i = 0; i < 5; i++) {
-      seriesPopularesLista += `<article class="articulosIndex">
-                <div class="contenedorImagen">
-                    <a href="detail-series.html?id=${info[i].id}">
-                        <img src= "https://image.tmdb.org/t/p/w342/${info[i].poster_path}" alt="">
-                    </a>
-                </div>
-                <h3>${info[i].original_name}</h3>
-                <p>${info[i].first_air_date}</p>
-            </article>`;
-    }
-    seriesPopulares.innerHTML = seriesPopularesLista;
-  })
-  .catch(function (error) {
-    console.log("El error fue: " + error);
-  });
+<footer class="footer">
+    <p>Santino Tomas Levy - Ciro Perlberger - Florencio Moneta - Programación UdeSA 2022 -
+    <a href = "mailto: cinepremiumdh@gmail.com">Mandanos un correo!</a>  <img class= "logocine" src="./img/imagenes tp/logo tp.png" alt="Logo de Cinepremium"></p>
+</footer>
 
-//Peliculas Mas Vistos//
-
-let urlTopRatedMovies =
-  "https://api.themoviedb.org/3/movie/top_rated?api_key=4bcb2ca1395628db6221ba6939b8c9d7";
-
-fetch(urlTopRatedMovies)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-
-    let info = data.results;
-
-    let pelisTop = document.querySelector(".contenedorArticulosVisto");
-    let pelisTopLista = "";
-
-    for (i = 0; i < 5; i++) {
-      pelisTopLista += `<article class="articulosIndex">
-                <div class="contenedorImagen">
-                    <a href="detail-movie.html?id=${info[i].id}">
-                        <img src= "https://image.tmdb.org/t/p/w342/${info[i].poster_path}" alt="">
-                    </a>
-                </div>
-                <h3>${info[i].title}</h3>
-                <p>${info[i].release_date}</p>
-            </article>`;
-    }
-    pelisTop.innerHTML = pelisTopLista;
-  })
-  .catch(function (error) {
-    console.log("El error fue: " + error);
-  });
+<script src="./js/index.js"></script>
+</body>
+</html>
