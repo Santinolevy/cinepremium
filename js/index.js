@@ -5,14 +5,14 @@
  
 
  formulario.addEventListener("submit", function (evento) {
-   evento.preventDefault()
-     if (inputField.value == "") {
-         alert("La busqueda no puede estar vacia!!")
-     } else if (inputField.value.length <= 3) {
-         alert("El termino a buscar debe tener al menos tres caracteres")
-     } else {
-         this.submit();
-     }
+  evento.preventDefault()
+    if (inputField.value == "") {
+        alert("La busqueda no puede estar vacia!!")
+    } else if (inputField.value.length <= 3) {
+        alert("El termino a buscar debe tener al menos tres caracteres")
+    } else {
+        this.submit();
+    }
  
  });
 
