@@ -86,9 +86,11 @@ body {
         text-align: center;
         margin: 40px;
         color: white;
+
+      
     }
     
-      .seccionpeliculas {
+      .contenedorArticulosVisto {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
