@@ -18,9 +18,9 @@
 
 
 
-let query = location.search
-let queryObjeto = new URLSearchParams(query)
-let palabra = queryStringObjectSearch.get("formularioDeBusqueda")
+ let query = location.search
+ let queryObjeto = new URLSearchParams(query)
+ let palabra = queryStringObjectSearch.get("formularioDeBusqueda")
 
 
 
