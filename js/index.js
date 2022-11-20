@@ -17,7 +17,7 @@
  });
 
 //Peliculas Populares//
-let urlPopularMovies = "https://api.themoviedb.org/3/movie/popular?api_key=4bcb2ca1395628db6221ba6939b8c9d7&language=en-US&page=1";
+let urlPopularMovies = "https://api.themoviedb.org/3/movie/popular?api_key=b3c5fcee75fac3fd848851441479d3b4";
 
 fetch(urlPopularMovies)
   .then(function (response) {
