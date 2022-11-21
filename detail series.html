@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detalle serie</title>
     <link rel="stylesheet" href="./css/general.css">
 </head>
 <body>
-    <header>
-      <div class="myNavbar">
-        <img class="logoNav"  src="./img/imagenes tp/logo tp.png">  </img>
-
-          <nav>
+  <header>
+    <div class="myNavbar">
+        <a href="index.html">
+            <img class="logoNav" src="./img/imagenes tp/logo tp.png" alt="Logo de cinepremium"/>
+        </a>
+        <nav>
             <ul>
-              <li> <a class="navigation"  href="./index.html">Home</a></li>
+            <li> <a class="navigation"  href="./index.html">Home</a></li>
               <li> <a class="navigation" href="./genres.html">Genero</a></li>
               <li> <a class=" navigation" href="./favorite.html">Favoritos</a></li>
-              <li><form action="./search-results.html" method="GET">
-                <input class="navigation" type="text" name="search" placeholder="¿Qué querés buscar?">
+              <li>
+                
+            <form me class="buscador" action="./search-results.html" method="GET" >
+                <input id="navigation" type="search" name="formularioDeBusqueda" placeholder="¿Qué querés buscar?">
             </form></li>
             </ul>
         </nav>
@@ -26,28 +29,28 @@
 </header>
     <div class="contenedor-padre">
         <div class="contenedor-imagen">
-            <img class="img" src="./img/imagenes tp/rick hd.jpeg" alt="Portada Rick y Morty">
-    </div>
-</div class="contenedor-texto">
-<h1>Rick y Morty</h1>
-<h4><span>  <img class="estrellas" src="./img/imagenes tp/115-1150391_highly-suited-rating-star-single-png (1).png" alt="rating">Rating:</span>9.2 </h4>
- <h4><span>Año de estreno:</span> 2013 </h4>
- <h4>Una serie animada que sigue las hazañas de un súper científico y su no tan brillante nieto.</h4>
- <h4><span>Reparto:</span> Justin Roiland, Chris Parnell, Spencer Grammer</h4>
- <h4><span>Genero:</span>Comedia</h4>
- <h4><span>Duración:</span>23m c/Capitulo</h4>
- <div>
+            <img class="img" src="" alt="Portada Top Gun">
 </div>
-<br>
-<br>
+
+</div class="contenedor-texto">
+<h1 class="tituloDetalleSeries" ></h1>
+  <ul class="rating"></ul>
+  <ul class="fechaDeEstreno"></ul>
+  <ul class="sinopsis"></ul>
+  <ul class="duracion"></ul>
+  <ul class="generos">
+
+
+  </ul>
+
 
 
 <div class="footer">
     <p>Santino Tomas Levy - Ciro Perlberger - Florencio Moneta - Programación UdeSA 2022 -
     <a href = "mailto: cinepremiumdh@gmail.com">Mandanos un correo!</a>  <img class= "logocine" src="./img/imagenes tp/logo tp.png" alt="Logo de Cinepremium"></p>
   </div>  
+  <script src="js/detail-pelis.js"></script>
 
   
-    
 </body>
 </html>
