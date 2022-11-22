@@ -38,7 +38,7 @@ fetch(urlPopularMovies)
       pelisPopularesLista += `
                 <article class="articulosIndex">
                     <div class="contenedorImagen">
-                        <a href="detail-movie.html?id=${info[5].id}">
+                        <a href="detail-pelis.html?id=${info[5].id}">
                             <img src= "https://image.tmdb.org/t/p/w342/${info[i].poster_path}" alt="">
                         </a>
                     </div>
