@@ -1,213 +1,140 @@
-/* detalle body, header y footer */
-body {
-    background-color: gray;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-  }
-
-  a {
-    color: #fff;
-  }
-
-  img {
-    width: 50%;
-  }
-
-  nav{
-    float: right;
-  }
-
+* {
+  box-sizing: border-box;
+ }
   
-  header{
-    border-radius: 30px;
-      background-color:black
-
-    }
-    header::after{
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    .myNavbar {
-        margin: 0 auto;
-        width: 80%;
-        position: relative;
-        background-color: black    
-    }
-
-      .logoNav{
-        float: left;
-        padding: 20px 0 ;
-        width: 20%;
-      }
-
-      nav ul{
-        margin: 0 auto;
-        padding: 0;
-        list-style: none;
-      }
-
-      nav li {
-      margin-left: 70px;
-      padding-top: 23px;
-        display: inline-block
-      }
-
-      .navigation{
-        font-size: 19px;
-    } 
-      nav a{
-      text-decoration: none;
-      color:white;
-      text-transform: uppercase;
-      font-size: 14px;
-      }
-
-      .footer {
-        
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: black;
-        color: white;
-        text-align: center;
-      }
-
-      .logocine{
-        width: 7%;
-        float: right
-      }
-
-      /* regla de varios html */
-      .title1 {
-        text-align: center;
-        margin: 40px;
-        color: white;
-
-      
-    }
-    
-      .contenedorArticulosVisto {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-      } 
-      
-      .title2 {
-        text-align: center;
-        margin: 100px;
-        color: white;
-    }
-
-    .seccionseries {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .img {
-        height: 380px;
-        width: 250px;
-        object-fit: cover;
-        border-radius: 15px;
-     }
-     /* reglas de detalle pelis y serie, resultado busqueda */
-     .contenedor-padre{ 
-        display: flex;
-        width: 100%;
-        margin-top: 20px;
-     }
-     .contenedor-imagen{
-        width: 50%;
-        padding: 20px;
-     }
-     .contenedor-texto{
-        margin-top: 60px;
-        margin-left: 20px;
-        margin-right: 30px;
-        align-items:flex-end;
-        flex-wrap: wrap;
-     }
-     .estrellas{
-        width: 20px;
-        margin-left: 5px;
-     }
-     span{
-        color: black;
-     }
-     
-     /* reglas search-results html */
-     .h1general{
-        text-align: center;
-    }
-    .resultadobusquedaoculto{
-        display: none;
-      }
-
-      /* regla de genres.html */
-      .secciongeneros{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-        padding: 10px;
-    }
-    
-    .titulosecciongeneros{
-        color: white;
-        margin-top: 10px;
-        margin-bottom: 0px;
-        align-self: center;
-        font-size: 35px;
-    }
-    
-    .hijosecciongeneros{
-        display: flex;
-        flex-direction: column;
-        width: 30%;
-        border-radius: 10px;
-        justify-content: flex-start;
-        align-items: center;
-    
-    }
-    
-    .listasecciongeneros{
-        color: white;
-        list-style: none;
-        padding-inline-start: 0%;
-    
-    }
-    
-    .lista{
-        padding: 0px 10px;
-        display: flex;
-        justify-content: center;
-        margin: 5px 0px;
-        background-color: red;
-        border-radius: 10px;
-        padding: 10px;
-    }
-    
-    .linkadetalleGenero{
-        color: white;
-        font-size: 20px;
-        text-decoration: none;
-        border-radius: 10px;
-        padding: 10px;
-        color: white;
-    }
-    /* responsive */
-    @media (max-width: 420px){
-      
-      .logoNav{
-        width: 40%;
-      }
-      nav li{
-        margin-left: 0px;
-         margin-bottom: 15px;
-      }
-    }
+ body {
+  background-color: gray;
+ }
+  
+ ul {
+  padding: 0%;
+  margin: 0%;
+ }
+  
+ li {
+  list-style-type: none;
+ }
+  
+ a {
+  text-decoration: none;
+  color: white;
+ }
+  
+ .h4Detalles {
+  margin: 10px;
+  text-align: left;
+  color: white;
+  font-weight: 100;
+ }
+  
+ header {
+  background-color: black;
+  margin: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+  
+ .contenedorTotalHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0%;
+  padding: 0%;
+ }
+  
+ .LogoHome {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  }
+  
+ .logoHome a {
+  width: 100%;
+ }
+  
+ .logo {
+  margin: 0%;
+  float:left;
+  padding:50px 0 ;
+  width: 400px;
+  height: 200px;
+ }
+  
+  
+ .buscadorHeader {
+  padding: 20px;
+ }
+  
+ h3 {
+  margin: 0;
+ }
+  
+ #MainDelIndex h2 {
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  margin: 20px;
+ }
+  
+ article h3,
+ p {
+  text-align: center;
+ }
+  
+ .contenedorArticulos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+  
+ .contenedorArticulos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  display: block;
+ }
+ .contenedorArticulosPeliculas {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+ }
+  
+ .contenedorArticulosSeriesPopulares {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+ }
+  
+ .contenedorArticulosPelisTop {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+ }
+  
+ .contenedorArticulosDetallesGenero {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+ }
+  
+ .articulosIndex {
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  border-radius: 7px;
+  margin: 5%;
+  width: 80%;
+  
+ }
+ 
