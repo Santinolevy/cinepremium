@@ -1,57 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet"  href="./css/general.css">
-</head>
-<body>
-    <header>
-        <div class="myNavbar">
-            <a href="index.html">
-                <img class="logoNav" src="./img/imagenes tp/logo tp.png" alt="Logo de cinepremium"/>
-            </a>
-            <nav>
-                <ul>
-                <li> <a class="navigation"  href="./index.html">Home</a></li>
-                  <li> <a class="navigation" href="./genres.html">Genero</a></li>
-                  <li> <a class=" navigation" href="./favorite.html">Favoritos</a></li>
-                  <li>
-                    
-                <form method="GET" class="buscador" action="./search-results.html" >
-                    <input id="navigation" type="search" name="formularioDeBusqueda" placeholder="¿Qué querés buscar?">
-                </form></li>
-                </ul>
-            </nav>
-        </div>
-</header>
-<main>
-    
-    <main>
-        <section class="seccionGeneros">
-            <h2 class="title1"> Generos de peliculas</h2>
-            <div class="contenedorGenerosPeliculas">
-            -----------------
-            </div>
-        </section>
-        <section class="seccionGeneros">
-            <h2 class="title1"> Generos de series</h2>
-            <div class="contenedorGenerosSeries">
-            -----------------
-            </div>
-        </section>
-
-    </main>
-
-
-<footer class="footer">
-    <p>Santino Tomas Levy - Ciro Perlberger - Florencio Moneta - Programación UdeSA 2022 -
-    <a href = "mailto: cinepremiumdh@gmail.com">Mandanos un correo!</a>  <img class= "logocine" src="./img/imagenes tp/logo tp.png" alt="Logo de Cinepremium"></p>
-</footer>
-
-<script src="./js/genres.js"></script>
-
-</body>
-</html>
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="./css/styles.css" />
+ 
+ 
+   <title>Cinepremium - Géneros</title>
+ </head>
+ 
+ <body>
+   <header>
+     <div class="logoHome">
+       <a href="index.html"
+         ><img class="logo" src="./img/logo tp.png" alt="Logo"
+       /></a>
+     </div>
+      <div id="segundoDiv">
+       <nav class="navegadorHeader">
+         <ul>
+           <li>
+             <a href="index.html">Home</a>
+           </li>
+           <li>
+             <a href="favorites.html">Favoritos</a>
+           </li>
+           <li>
+             <a href="genres.html">Generos</a>
+           </li>
+         </ul>
+       </nav>
+        <form method="GET" class="buscadorHeader" action="./search-results.html">
+         <input id="buscadorHeaderInput" type="search" name="formularioDeBusqueda" placeholder="¿Que desea buscar?" />
+     </form>
+     </div>
+   </header>
