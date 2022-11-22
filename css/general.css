@@ -311,4 +311,215 @@
   margin: 20px;
   background-color: black;
  }
+ .titularGeneros {
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 300;
+ }
+  
+ .contenedorArticulosFavoritos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  flex-direction: row;
+ }
+ .contenedorArticulosFavoritosSeries {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  flex-direction: row;
+ }
+ .contenedorArticulosFavoritosPelicula {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  flex-direction: row;
+ }
+  
+ .listaPelicula {
+  font-size: 30px;
+ }
+ .listaSerie{
+    font-size:30px;
+ }
+ .descripcionPelicula {
+  font-size: 20px;
+ }
+  
+ h1#favoritosTitular {
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 300;
+ }
+  
+ #sinResultados {
+  display: none;
+ }
+  
+ #main-footerDos {
+  background-color: rgb(0, 0, 0);
+  font-weight: bold;
+  color: whitesmoke;
+  display: flex;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  margin: 125px 0px 0px 0px;
+  border-top: 2px solid white;
+ }
+  
+  .buscadorHeaderInput {
+    width: 50%;
+  }
+  .articulosIndex {
+    background-color: black;
+    color: white;
+    width: 15%;
+  }
+  .logo {
+    width: 50%;
+    margin: 0%;
+  }
+  .logoHome {
+    width: 30%;
+    display: flex;
+  }
+  .articulosDeNav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 70%;
+    margin: 0%;
+  }
+  .articulosDeNav ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .articulosDeNav li {
+    text-align: center;
+    width: 20%;
+  }
+  .articulosDeNav a {
+    display: inline-block;
+    color: whitesmoke;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 5px 0;
+  }
+  .contenedorArticulosDetallesGenero {
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  .navegadorHeader {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 25px;
+    margin: 0 auto;
+    width: 80%;
+    position: relative;  
+   }
+  main {
+    margin: 20px;
+  }
+   .contenedorGenres {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contenedorGenresSeries {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .articulosGenres {
+    padding: 25.5px;
+    width: 25%;
+    display: flex;
+  }
+  
+  .contenedorPelisDetalle {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .contenedorSeriesDetalle {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  .tituloGenres {
+    color: whitesmoke;
+    text-align: left;
+  }
+   .contenedorArticulosFavoritos {
+    padding: 10px;
+    flex-direction: row;
+  }
+  .contenedorArticulosFavoritosSeries {
+    padding: 10px;
+    flex-direction: row;
+  }
+  .contenedorArticulosFavoritosPelicula {
+    padding: 10px;
+    flex-direction: row;
+  }
+  .listaPelicula {
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+  }
+  .listaPelicula ul {
+    justify-content: center;
+  }
+  .listaSerie {
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+  }
+  .listaSerie ul {
+    justify-content: center;
+  }
+   .subtitulosDetalles {
+    font-size: 50px;
+  }
+ .searchMovies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+  
+ .searchTVS {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+  
+ #mainDelIndex section{
+    justify-content: center;
+  }
+ .carga {
+  text-align: center;
+ }
+  
+ .sinopsis {
+  color: black;
+  font-size: 40px;
+  text-align: left;
+ }
+  
+  
+  
  
