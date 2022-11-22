@@ -1,60 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/general.css">
-
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="./css/styles.css" />
+ 
+ 
+   <title>Cinepremium- Detalle de Géneros</title>
 </head>
+ 
 <body>
+ <header>
+   <div class="logoHome">
+     <a href="index.html"
+       ><img class="logo" src="./img/logo tp.png" alt="Logo"
+     /></a>
+   </div>
+ 
+   <div id="segundoDiv">
+     <nav class="navegadorHeader">
+       <ul>
+         <li>
+           <a href="index.html">Home</a>
+         </li>
+         <li>
+           <a href="favorites.html">Favoritos</a>
+         </li>
+         <li>
+           <a href="genres.html">Generos</a>
+         </li>
+       </ul>
+     </nav>
+ 
+     <form method="GET" class="buscadorHeader" action="./search-results.html">
+       <input id="buscadorHeaderInput" type="search" name="formularioDeBusqueda" placeholder="¿Que desea buscar?" />
+   </form>
+   </div>
+ </header>
+   <main id="MainDelIndex">
+       <h2 class="subtitulo"></h2>
+       <section>
+           <h2 class="h4Detalles">Películas</h2>
+           <div class="contenedorPelisDetalle">
+ 
+ 
+           </div>
+       </section>    
+       <section>
+           <h2 class="h4Detalles">Series</h2>
+           <div class="contenedorSeriesDetalle">
+              
+ 
+           </div>
+ 
+       </section>
+ 
+   </main>
+   <footer class="main-footer">
+     <p>Santino Tomas Levy - Ciro Perlberger - Florencio Moneta - Programación UdeSA 2022 -
+       <a href = "mailto: cinepremiumdh@gmail.com">Mandanos un correo!</a>
    
-    <header>
-        <div class="myNavbar">
-            <img class="logoNav"  src="./img/imagenes tp/logo tp.png">  </img>
-
-              <nav>
-                <ul>
-                  <li> <a class="navigation"  href="./index.html">Home</a></li>
-                  <li> <a class="navigation" href="./genres.html">Genero</a></li>
-                  <li> <a class=" navigation" href="./favorite.html">Favoritos</a></li>
-                  <li><form action="./search-results.html" method="GET">
-                    <input class="navigation" type="text" name="search" placeholder="¿Qué querés buscar?">
-                </form></li>
-                </ul>
-            </nav>
-        </div>
-</header>
-
-<h1 class="title1"> GENERO: ACCIóN</h1>
-<h2 class="title2"> PELÍCULAS</h2>
-<section class="seccionpeliculas">
-<article>
-
-<h3>Avatar 2 (2022) </h3>
-<a href="./detail-pelis.html"><img class="img" src="./img/imagenes tp/Avatar peli.jpeg" alt="series"></a>
-</article>
-
-<article>
-    <h3>Fall (2022) </h3>
-    <a href="./detail-pelis.html"><img class="img" src="./img/imagenes tp/fall peli.webp" alt= "series"></a>
-</article>
-<article>
-    <h3>TopGun: Maverick (2022)</h3>
-    <a href="./detail-pelis.html"><img class="img" src="./img/imagenes tp/top gun hd.jpeg" alt="img alba"></a>
-</article>
-<article>
-   
-    <h3>Gladiator (2022)</h3>
-    <a href="./detail-pelis.html"><img class="img" src="./img/imagenes tp/Gladiator peli.jpeg" alt="img alba"></a>
-
-</section>
-
-
-<div class="footer">
-    <p>Santino Tomas Levy - Ciro Perlberger - Florencio Moneta - Programación UdeSA 2022 -
-    <a href = "mailto: cinepremiumdh@gmail.com">Mandanos un correo!</a>  <img class= "logocine" src="./img/imagenes tp/logo tp.png" alt="Logo de Cinepremium"></p>
-  </div>
+ </footer>
+   <script src="./js/detail-genres.js"></script>
 </body>
+ 
 </html>
+Detail genres.js
+
+//Validacion del formulario//
+ 
+let formulario = document.querySelector(".buscadorHeader");
+let inputField = document.querySelector("#buscadorHeaderInput");
+formulario.addEventListener("submit", function (evento) {
+  evento.preventDefault()
+    if (inputField.value == "") {
+        alert("Ingrese texto")
+    } else if (inputField.value.length <= 3) {
+        alert("El termino a buscar debe tener al menos tres caracteres")
+    } else {
+        this.submit();
+    }
+});
+ 
+  let queryStringGenres = location.search;
+  let queryStringObject = new URLSearchParams(queryStringGenres);
+  let id = queryStringObject.get("id");
+ 
+  let urlGenresMovie = `https://api.themoviedb.org/3/discover/movie?api_key=b3c5fcee75fac3fd848851441479d3b4&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`;
+ 
+  let queryStringNombre = location.search;
+  let queryStringObjectNombre = new URLSearchParams(queryStringNombre);
+  let nombre = queryStringObjectNombre.get("nombre");
+  let subtitulo = (document.querySelector(".subtitulo").innerText = `${nombre}`);
+ 
+ 
+  fetch(urlGenresMovie)  
+  .then(function (response) {
+     return response.json();
+  })
+ 
+  .then(function (data) {
+     console.log(data);
+ 
+     let contenedorPelis = document.querySelector(".contenedorPelisDetalle");
+     let generosPeliculasLista = "";
+     let info = data.results;
+     console.log(info);
+    
+     for (let i = 0; i < info.length; i++) {
+        generosPeliculasLista += ` <article class="articulosIndex">
+  <div class="contenedorImagen">
+  <a href="detail-movie.html?id=${info[i].id}"><img src="https://image.tmdb.org/t/p/w342/${info[i].poster_path}" alt="."> </a>     
+  </div>
+  <h3>${info[i].title}
+  </h3>
+  <p>${info[i].release_date}
+  </p>
+  </article>`;
+     }      contenedorPelis.innerHTML = generosPeliculasLista;
+  })
+ 
+  .catch(function (error) {
+     console.log(error);
+  });
+ 
+  //Series
+ 
+  let urlGenresSeries = `https://api.themoviedb.org/3/discover/tv?api_key=b3c5fcee75fac3fd848851441479d3b4&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&with_genres=${id}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate`;
+ 
+  fetch(urlGenresSeries)
+  .then(function (response) {
+     return response.json();
+  })
+ 
+  .then(function (data) {
+     console.log(data);
+ 
+     //let seccionPeliculasGeneros = document.querySelector(".")
+     let contenedorSeries = document.querySelector(".contenedorSeriesDetalle");
+     let generosSeriesLista = "";
+     let info = data.results;
+ 
+     for (let i = 0; i < info.length; i++) {
+        generosSeriesLista += ` <article class="articulosIndex">
+  <div class="contenedorImagen">
+  <a href="detail-series.html?id=${info[i].id}"><img src="https://image.tmdb.org/t/p/w342/${info[i].poster_path}" alt="."> </a>     
+  </div>
+  <h3>${info[i].original_name}
+  </h3>
+  <p>${info[i].first_air_date}
+  </p>
+  </article>`;
+     }
+     contenedorSeries.innerHTML = generosSeriesLista;
+ 
+  })
+ 
+  .catch(function (error) {
+     console.log(error);
+  });
