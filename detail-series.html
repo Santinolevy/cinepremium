@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle serie</title>
-    <link rel="stylesheet" href="./css/general.css">
-</head>
-<body>
-  <header>
-    <div class="myNavbar">
-        <a href="index.html">
-            <img class="logoNav" src="./img/imagenes tp/logo tp.png" alt="Logo de cinepremium"/>
-        </a>
-        <nav>
-            <ul>
-            <li> <a class="navigation"  href="./index.html">Home</a></li>
-              <li> <a class="navigation" href="./genres.html">Genero</a></li>
-              <li> <a class=" navigation" href="./favorite.html">Favoritos</a></li>
-              <li>
-                
-            <form me class="buscador" action="./search-results.html" method="GET" >
-                <input id="navigation" type="search" name="formularioDeBusqueda" placeholder="¿Qué querés buscar?">
-            </form></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-    <div class="contenedor-padre">
-        <div class="contenedor-imagen">
-            <img class="img" src="" alt="Portada Top Gun">
-</div>
-
-</div class="contenedor-texto">
-<h1 class="tituloDetalleSeries" ></h1>
-  <ul class="rating"></ul>
-  <ul class="fechaDeEstreno"></ul>
-  <ul class="sinopsis"></ul>
-  <ul class="duracion"></ul>
-  <ul class="generos">
-
-
-  </ul>
-
-
-
-<div class="footer">
-    <p>Santino Tomas Levy - Ciro Perlberger - Florencio Moneta - Programación UdeSA 2022 -
-    <a href = "mailto: cinepremiumdh@gmail.com">Mandanos un correo!</a>  <img class= "logocine" src="./img/imagenes tp/logo tp.png" alt="Logo de Cinepremium"></p>
-  </div>  
-  <script src="js/detail-pelis.js"></script>
-
-  
-</body>
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="./css/styles.css" />
+ 
+ 
+   <title>Cinepremium - Detalle de Series</title>
+ </head>
+ <body>
+   <header>
+     <div class="logoHome">
+       <a href="index.html"
+         ><img class="logo" src="./img/logo tp.png" alt="Logo"
+       /></a>
+     </div>
+ 
+     <div id="segundoDiv">
+       <nav class="navegadorHeader">
+         <ul>
+           <li>
+             <a href="index.html">Home</a>
+           </li>
+           <li>
+             <a href="favorites.html">Favoritos</a>
+           </li>
+           <li>
+             <a href="genres.html">Generos</a>
+           </li>
+         </ul>
+       </nav>
+ 
+       <form
+         method="GET" class="buscadorHeader" action="./search-results.html"
+       >
+         <input
+           id="buscadorHeaderInput" type="search" name="formularioDeBusqueda" placeholder="¿Que desea buscar?"/>
+       </form>
+     </div>
+   </header>
+ 
+   <main>
+     <section class="cajaSerie">
+       <h2 class="subtitulosDetalles">Breaking Bad</h2>
+       <article class="articuloSerie">
+         <a>
+           <img class="imagenSerie" src="" alt="" />
+         </a>
+       </article>
+       <article class="listaSerie">
+         <ul>
+           <li class="tituloSerie"></li>
+           <li class="ratingSerie"></li>
+           <li class="fechaEstrenoSerie"></li>
+           <li class="genero"></li>
+           <li>
+             <a class="favSeries" href="favorites.html">Agregar favoritos</a>
+           </li>
+         </ul>
+       </article>
+     </section>
+     <h3 class="sinopsis">Sinopsis</h3>
+     <section class="descripcionSerie">
+     
+     </section>
+   </main>
+ 
+   <footer class="main-footer">
+     <p>Santino Tomas Levy - Ciro Perlberger - Florencio Moneta - Programación UdeSA 2022 -
+       <a href = "mailto: cinepremiumdh@gmail.com">Mandanos un correo!</a>
+ </footer>
+   <script src="./js/detail-series.js"></script>
+ </body>
 </html>
