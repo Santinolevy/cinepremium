@@ -42,3 +42,32 @@ else{
 }
 
 function buscarYMostrarFavoritosPeliculas(id)
+ //Fetch para buscar cada elemento del Array
+ let urlMovies = `https://api.themoviedb.org/3/movie/${id}?api_key=4bcb2ca1395628db6221ba6939b8c9d7`
+        
+ fetch(urlMovies)
+     .then(function(response) {
+         return response.json();
+     })
+     .then(function(data) {
+         console.log(data);
+         peliculasFavoritas += 
+         `
+         <article class="articulosIndex">
+         <div class="contenedorImagen">
+             <a href="detail-movie.html?id=${data.id}">
+                 <img src= "https://image.tmdb.org/t/p/w342/${data.poster_path}" alt="">
+             </a>
+         </div>
+         <h3>${data.title}</h3>
+         <p>${data.release_date}</p>
+     </article>`;
+         
+ 
+         section.innerHTML = peliculasFavoritas
+     })
+     .catch(function(error) {
+         console.log("El error fue: " + error);
+     });
+ 
+ 
