@@ -49,7 +49,48 @@ fetch(url)
    }
  
    generoDetalle.innerHTML = generosLista;
- })
+
+ //favoritos de Serie//
+ let favoritosSeries = [];
+
+ let recuperoStorage = localStorage.getItem("favoritosSeries");
+
+ if (recuperoStorage != null) {
+   //primero queremos que sea una cadena de texto para guardarlo en favoritos
+
+   favoritosSeries = JSON.parse(recuperoStorage);
+ }
+
+ //Al Hacer click en el link ...
+
+ let favSeries = document.querySelector(".favSeries");
+
+ //Chequear si está el ID en el array de Favoritos pertenenciente al eleegido
+
+ if (favoritosSeries.includes(id)) {
+   favSeries.innerText = "Quitar de Favoritos";
+ }
+
+ favSeries.addEventListener("click", function (evento) {
+   evento.preventDefault();
+
+   if (favoritosSeries.includes(id)) {
+     let indice = favoritosSeries.indexOf(id);
+     favoritosSeries.splice(indice, 1);
+     favSeries.innerText = "Agregar a favoritos";
+   } else {
+     favoritosSeries.push(id);
+     favSeries.innerText = "Quitar de favoritos";
+   }
+
+   let favSerieToString = JSON.stringify(favoritosSeries); //Transformamos el array en cadena de texto
+
+   //Guardamos el array en el Storage
+   localStorage.setItem("favoritosSeries", favSerieToString); //Guardamos array en el storage
+
+console.log(localStorage)
+ });
+  })
  .catch(function (error) {
    console.log("El error fue: " + error);
- });
+ })

@@ -51,7 +51,51 @@ fetch(url)
    }
  
    generoDetalle.innerHTML = generosLista;
- })
+ // FAVORITOS DETALLE //
+
+    //Creamos un array que iremos completando con datos//
+    let favoritos = [];
+
+    //Recuperamos storage
+    let recuperoStorage = localStorage.getItem("favoritos");
+
+    if (recuperoStorage != null) {
+      //primero queremos que sea una cadena de texto para guardarlo en favoritos
+
+      favoritos = JSON.parse(recuperoStorage);
+    }
+
+    //Al Hacer click en el link ...
+
+    let fav = document.querySelector(".fav");
+
+    //Chequear si está el ID en el array de Favoritos pertenenciente al eleegido
+
+    if (favoritos.includes(id)) {
+      fav.innerText = "Quitar de Favoritos";
+    }
+
+    fav.addEventListener("click", function (evento) {
+      evento.preventDefault();
+
+      if(favoritos.includes(id)){
+          let indice = favoritos.indexOf(id);
+          favoritos.splice(indice,1)
+          fav.innerText = "Agregar a favoritos"
+      }else{
+          favoritos.push(id);
+          fav.innerText = "Quitar de favoritos"
+      }
+
+      let favToString = JSON.stringify(favoritos); //Transformamos el array en cadena de texto
+
+      //Guardamos el array en el Storage
+      localStorage.setItem("favoritos", favToString);
+
+
+      console.log(localStorage);
+    });
+  })
  .catch(function (error) {
    console.log("El error fue: " + error);
  });
