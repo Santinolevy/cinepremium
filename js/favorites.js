@@ -77,3 +77,11 @@ function buscarYMostrarFavoritosPeliculas(id)
    //Transformamos el JSON en un array
   let favoritosSerie = JSON.parse(recuperoStorageDos)
 console.log(favoritosSerie);
+//Capturamos el contenedor del elemento a mostrar
+
+let sectionSerie = document.querySelector(".contenedorArticulosFavoritosSeries");
+let seriesFavoritas = ""   
+//Si el storage está vacío indicamos al usuario que no hay favoritos seleccionados
+    if(favoritosSerie == null || favoritosSerie.length == 0 ) {
+        favoritosSerie.innerText = "¡No hay favoritos seleccionados!"
+    }else{
