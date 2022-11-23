@@ -85,3 +85,10 @@ let seriesFavoritas = ""
     if(favoritosSerie == null || favoritosSerie.length == 0 ) {
         favoritosSerie.innerText = "¡No hay favoritos seleccionados!"
     }else{
+        //for para recorrer el array que tiene los favoritos
+        for (let i=0; i<favoritosSerie.length; i++){
+            buscarYMostrarFavoritosSeries(favoritosSerie[i])
+        }
+        }
+                    
+    function buscarYMostrarFavoritosSeries(id){
