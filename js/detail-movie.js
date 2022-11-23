@@ -1,4 +1,3 @@
-//Validacion formulariosx;//
 
 let formulario = document.querySelector(".buscadorHeader");
 let inputField = document.querySelector("#buscadorHeaderInput");
@@ -36,7 +35,7 @@ fetch(url)
     let fechaEstreno = document.querySelector(".fechaEstrenoPelicula");
     let descripcionPelicula = document.querySelector(".descripcionPelicula");
 
-    //Como no hay array con las peliculas. Reemplazamos/Actualizamos la información de esos elementos capturados
+    
     titulo.innerText = data.title;
     imagen.src = `https://image.tmdb.org/t/p/w342/${data.poster_path}`;
     subtitulo.innerText = data.title;
@@ -57,25 +56,23 @@ fetch(url)
 
 
 
-    // FAVORITOS DETALLE //
-
-    //Creamos un array que iremos completando con datos//
+   
     let favoritos = [];
 
-    //Recuperamos storage
+    
     let recuperoStorage = localStorage.getItem("favoritos");
 
     if (recuperoStorage != null) {
-      //primero queremos que sea una cadena de texto para guardarlo en favoritos
+      
 
       favoritos = JSON.parse(recuperoStorage);
     }
 
-    //Al Hacer click en el link ...
+   
 
     let fav = document.querySelector(".fav");
 
-    //Chequear si está el ID en el array de Favoritos pertenenciente al eleegido
+    
 
     if (favoritos.includes(id)) {
       fav.innerText = "Quitar de Favoritos";

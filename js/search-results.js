@@ -13,14 +13,13 @@ let inputField = document.querySelector("#buscadorHeaderInput");
     }
  });
 
-//Capturamos QueryString
-//En este caso la propiedad Search permite almacenar la query String completa de una URL, es decir tanto la clave como el valor, y me la va a dar en formato de cadena de texto, osea string que es un tipo de dato
+
 let queryStringBusqueda = location.search;
-//Lo que hago en esta linea de codigo es declarar otra variable de nombre QueryStringObjectSearch y la igualo a una herramiento llamada new URLSearchParams que es un objeto literal lleno de metodos y que nos va a permitir capturar el valor de una QueryString en especifico. Esta herramienta recibe como parametro lo que nos traia location.search
+
 let queryStringObjectSearch = new URLSearchParams(queryStringBusqueda);
-//Y entonces, lo que hago en la linea siguiente es declarar la variable de nombre Query y utilizar un metodo de New URLSearch Params que es get.
+
 let query = queryStringObjectSearch.get("formularioDeBusqueda");
-//Get finalmente va a ser quien extraiga el valor de la query string que en este caso es lo que ingresó el usuario. Ej: Spiderman.  Get es uno de los metodos de URL Search Params
+
 
 //USAMOS QUERY STRING PARA EL ENDPOINT//
 let urlSearchMovies = `https://api.themoviedb.org/3/search/movie?api_key=b3c5fcee75fac3fd848851441479d3b4&language=en-US&query=${query}&page=1&include_adult=false`;

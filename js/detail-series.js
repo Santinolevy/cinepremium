@@ -1,4 +1,4 @@
-//Validacion del formulario//
+
 
 let formulario = document.querySelector(".buscadorHeader");
 let inputField = document.querySelector("#buscadorHeaderInput");
@@ -59,16 +59,15 @@ fetch(url)
    let recuperoStorage = localStorage.getItem("favoritosSeries");
 
    if (recuperoStorage != null) {
-     //primero queremos que sea una cadena de texto para guardarlo en favoritos
-
+     
      favoritosSeries = JSON.parse(recuperoStorage);
    }
 
-   //Al Hacer click en el link ...
+   
 
    let favSeries = document.querySelector(".favSeries");
 
-   //Chequear si está el ID en el array de Favoritos pertenenciente al eleegido
+   
 
    if (favoritosSeries.includes(id)) {
      favSeries.innerText = "Quitar de Favoritos";

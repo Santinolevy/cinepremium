@@ -1,4 +1,3 @@
-//Validacion del formulario//
 
 let formulario = document.querySelector(".buscadorHeader");
 let inputField = document.querySelector("#buscadorHeaderInput");
@@ -24,19 +23,19 @@ formulario.addEventListener("submit", function (evento) {
    let favoritos = JSON.parse(recuperoStorage)
    console.log(favoritos);
 
-   //Capturamos el contenedor del elemento a mostrar
+   
 
    let section = document.querySelector(".contenedorArticulosFavoritosPelicula");
    let peliculasFavoritas = ""
 
-   //Si el storage está vacío indicamos al usuario que no hay favoritos seleccionados
+   
 
    if(favoritos == null || favoritos.length == 0 ) {
        favoritosTitular.innerText = "¡No hay favoritos seleccionados!"
 
    }
    else{
-       //for para recorrer el array que tiene los favoritos
+       
        for (let i=0; i<favoritos.length; i++){
            buscarYMostrarFavoritosPeliculas(favoritos[i])
        }
@@ -98,8 +97,10 @@ console.log(favoritosSerie);
                        
        function buscarYMostrarFavoritosSeries(id){
                        
-       //Fetch para buscar cada elemento del Array
+       
    let urlSeries = `https://api.themoviedb.org/3/tv/${id}?api_key=4bcb2ca1395628db6221ba6939b8c9d7`
+
+   fetch(urlSeries)
                            
     fetch(urlSeries)
        .then(function(response) {

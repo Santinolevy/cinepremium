@@ -1,4 +1,4 @@
- //Validacion del formulario//
+
  
 let formulario = document.querySelector(".buscadorHeader");
 let inputField = document.querySelector("#buscadorHeaderInput");
