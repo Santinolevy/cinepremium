@@ -70,4 +70,10 @@ function buscarYMostrarFavoritosPeliculas(id)
          console.log("El error fue: " + error);
      });
  
- 
+ //FAVORITOS DE SERIES//
+ onsole.log("favoritos")
+ //Recupero Storage//                    
+  let recuperoStorageDos = localStorage.getItem("favoritosSeries");
+   //Transformamos el JSON en un array
+  let favoritosSerie = JSON.parse(recuperoStorageDos)
+console.log(favoritosSerie);
