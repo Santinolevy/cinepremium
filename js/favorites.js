@@ -91,4 +91,32 @@ let seriesFavoritas = ""
         }
         }
                     
-    function buscarYMostrarFavoritosSeries(id){
+    function buscarYMostrarFavoritosSeries(id)
+    //Fetch para buscar cada elemento del Array
+    let urlSeries = `https://api.themoviedb.org/3/tv/${id}?api_key=4bcb2ca1395628db6221ba6939b8c9d7`
+                            
+     fetch(urlSeries)
+        .then(function(response) {
+            return response.json();
+                                })
+        .then(function(data) {
+        console.log(data);
+                        
+        seriesFavoritas +=  
+        `<article class="articulosIndex">
+            <div class="contenedorImagen">
+                <a href="detail-series.html?id=${data.id}">
+                    <img src= "https://image.tmdb.org/t/p/w342/${data.poster_path}" alt="">
+                </a>
+            </div>
+            <h3>${data.original_name}</h3>
+            <p>${data.first_air_date}</p>
+        </article>
+        `;                  
+        sectionSerie.innerHTML = seriesFavoritas
+                                })
+        .catch(function(error) {
+            console.log("El error fue: " + error);
+        });
+                            
+        
