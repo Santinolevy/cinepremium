@@ -50,7 +50,7 @@
         let genresSeries = document.querySelector(".contenedorGenresSeries");
         let genresListaSeries = "";
   
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 12; i++) {
         console.log(data.genres[i]);
         genresListaSeries += ` <article class="articulosGenres"> <a href="detail-genres.html?id=${info[i].id}&nombre=${data.genres[i].name}"> <h2> ${data.genres[i].name} </h2> </a></article>`;
         }
