@@ -36,9 +36,8 @@
   
     //series
   
-    let urlGenresSeries =
-    let apikey = "b3c5fcee75fac3fd848851441479d3b4"
-    "https://api.themoviedb.org/3/genre/tv/list?api_key=b3c5fcee75fac3fd848851441479d3b4";
+    let urlGenresSeries = "https://api.themoviedb.org/3/genre/tv/list?api_key=b3c5fcee75fac3fd848851441479d3b4";
+    let apikey = b3c5fcee75fac3fd848851441479d3b4
   
     fetch(urlGenresSeries)
     .then(function (response) {
