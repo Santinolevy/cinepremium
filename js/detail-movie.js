@@ -18,7 +18,7 @@ formulario.addEventListener("submit", function (evento) {
 let queryStringPeliculas = location.search;
 let queryStringObject = new URLSearchParams(queryStringPeliculas);
 let id = queryStringObject.get("id");
-let url = `https://api.themoviedb.org/3/movie/${id}?api_key=4bcb2ca1395628db6221ba6939b8c9d7`;
+let url = `https://api.themoviedb.org/3/movie/${id}?api_key=b3c5fcee75fac3fd848851441479d3b4`;
 
 fetch(url)
   .then(function (response) {
