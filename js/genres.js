@@ -23,7 +23,7 @@
         let genresMovie = document.querySelector(".contenedorGenres");
         let genresLista = "";
         let info = data.genres;
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 12; i++) {
         console.log(data.genres[i]);
         genresLista += ` <article class="articulosGenres"> <a href="detail-genres.html?id=${info[i].id}&nombre=${data.genres[i].name}"> <h2> ${data.genres[i].name} </h2> </a></article>`;
         }
